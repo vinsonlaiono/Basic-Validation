@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form_question">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h1>User Registration</h1>
+            <table>
+                <form action="/results" method = 'post'>
+                    <tr>
+                        <td><label for="">Name: </label></td><td><input type="text" name="name"></td>
+                    </tr>
+           
+                    <tr>
+                        <td><label for="">Dojo Location</label></td>
+                        <td>
+                            <select name="location" id="">
+                                <option value="San Jose">San Jose</option>
+                                <option value="Seattle">Seattle</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Favorite Language</label></td>
+                        <td>
+                            <select name="language" id="">
+                                <option value="HTML" name = "HTML">HTML</option>
+                                <option value="Python" name = "Python">Python</option>
+                            </select>    
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td><label for="">Comment (optional)</label></td>
+                        <td>
+                            <textarea name="comment" id="comment" cols="30" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" class="button">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.wrapper{
+    min-height: 320px;
+    width: 500px;
+    background-color: #86bded;
+    border: 3px solid;
+    margin: auto;
+    border-radius: 5px;
+}
+
+textarea,
+tr{
+    display: block;
+} 
+.name,
+.location,
+.language,
+.comment_box{
+    padding: 15px;
+    padding-top: 0px;
+    margin-top: 0px;
+    border-radius: 5px;
+}
+select{
+    margin-left: 5px;
+}
+.button{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(33, 159, 197);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #1894b3}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
